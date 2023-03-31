@@ -7,9 +7,13 @@
 
 import SwiftUI
 struct GridItem:Identifiable {
+   
+    
+    
+    
     let id = UUID()
     let height: CGFloat
-
+    
 
     let imgString: String
 }
@@ -18,7 +22,7 @@ struct PinterestGrid: View {
     struct Column: Identifiable {
         let id = UUID()
         var gridItems = [GridItem]()
-        
+       
         
     }
     
@@ -33,7 +37,7 @@ struct PinterestGrid: View {
         
         var columns = [Column]()
         for _ in 0 ..< numOfColumns {
-            columns.append (Column())
+            columns.append (Column( ))
         }
         
         
@@ -64,41 +68,43 @@ struct PinterestGrid: View {
         
         self.columns = columns
     }
-    
+    @State private var isActive : Bool = false
     var body: some View {
         ZStack{
-            
-            HStack(alignment: .top, spacing: spacing){
-                ForEach(columns) {column in
-                    LazyVStack(spacing: spacing) {
-                        ForEach(column.gridItems) { gridItem in
-                            getItemView(gridItem: gridItem)
-                            //                                Rectangle()
-                            //                                    .foregroundColor(.blue)
-                            //                                    .frame(height: gridItem.height)
-                            //                                    .overlav(
-                            //                                        Text (gridItem.title)
-                            //                                            .font(. system(size: 30, weight: .bold))
-                            //                                    )
+           
+               
+                    HStack(alignment: .top, spacing: spacing){
+                        ForEach(columns) {column in
+                            LazyVStack(spacing: spacing) {
+                                ForEach(column.gridItems) { gridItem in
+                                    
+                                        
+                                        getItemView(gridItem: gridItem)
+                                        
+                                        
+                                    }
+                                
                             
-                        }
-                    }
+                        
+                        
+                    }.padding(.horizontal, horizontalPadding)
                     
-                }
-                
-            }.padding(.horizontal, horizontalPadding)
+                }}
         }
         
     }
     func getItemView(gridItem: GridItem) -> some View {
         ZStack {
             GeometryReader { reader in
-                Image(gridItem.imgString)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: reader.size.width,
-                           height: reader.size.height,
-                           alignment: .center)
+                NavigationLink(destination: empty( gridItems: GridItem(height: 50, imgString: gridItem.imgString)), isActive: self.$isActive) {
+                    Image(gridItem.imgString)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: reader.size.width,
+                               height: reader.size.height,
+                               alignment: .center)
+                }
+                
             }
         }
         .frame(height: gridItem.height)
@@ -113,8 +119,8 @@ struct PinterestGrid: View {
 
 
 
-struct ContentViewBackup_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentViewBackup_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView( selectedItem: GridItem(height: 9, imgString: "String"))
+//    }
+//}

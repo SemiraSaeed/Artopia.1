@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F24BF1E129BBA36300B53783 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24BF1E029BBA36300B53783 /* ItemModel.swift */; };
+		F24BF1E529BBA67000B53783 /* ArtViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24BF1E429BBA67000B53783 /* ArtViewModal.swift */; };
+		F24BF1E729BC35FF00B53783 /* content2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24BF1E629BC35FF00B53783 /* content2.swift */; };
+		F24BF1E929BC39C500B53783 /* empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24BF1E829BC39C500B53783 /* empty.swift */; };
+		F2877BB829D50C3F00C5CE2A /* trail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2877BB729D50C3F00C5CE2A /* trail.swift */; };
+		F2877BBC29D60AB300C5CE2A /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2877BBB29D60AB300C5CE2A /* NewPostView.swift */; };
+		F2877BBE29D6654E00C5CE2A /* trail2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2877BBD29D6654E00C5CE2A /* trail2.swift */; };
 		F2CC348929B8D534004236D5 /* ArtopiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CC348829B8D534004236D5 /* ArtopiaApp.swift */; };
 		F2CC348B29B8D534004236D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CC348A29B8D534004236D5 /* ContentView.swift */; };
 		F2CC348D29B8D535004236D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2CC348C29B8D535004236D5 /* Assets.xcassets */; };
@@ -18,6 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F24BF1E029BBA36300B53783 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		F24BF1E429BBA67000B53783 /* ArtViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtViewModal.swift; sourceTree = "<group>"; };
+		F24BF1E629BC35FF00B53783 /* content2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = content2.swift; sourceTree = "<group>"; };
+		F24BF1E829BC39C500B53783 /* empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = empty.swift; sourceTree = "<group>"; };
+		F2877BB729D50C3F00C5CE2A /* trail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trail.swift; sourceTree = "<group>"; };
+		F2877BBB29D60AB300C5CE2A /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
+		F2877BBD29D6654E00C5CE2A /* trail2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trail2.swift; sourceTree = "<group>"; };
 		F2CC348529B8D534004236D5 /* Artopia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artopia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2CC348829B8D534004236D5 /* ArtopiaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtopiaApp.swift; sourceTree = "<group>"; };
 		F2CC348A29B8D534004236D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +54,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F24BF1DF29BBA34000B53783 /* Model  */ = {
+			isa = PBXGroup;
+			children = (
+				F24BF1E029BBA36300B53783 /* ItemModel.swift */,
+			);
+			path = "Model ";
+			sourceTree = "<group>";
+		};
+		F24BF1E329BBA5BF00B53783 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F24BF1E429BBA67000B53783 /* ArtViewModal.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		F2CC347C29B8D534004236D5 = {
 			isa = PBXGroup;
 			children = (
@@ -59,12 +89,19 @@
 		F2CC348729B8D534004236D5 /* Artopia */ = {
 			isa = PBXGroup;
 			children = (
+				F24BF1DF29BBA34000B53783 /* Model  */,
 				F2CC348829B8D534004236D5 /* ArtopiaApp.swift */,
 				F2CC348A29B8D534004236D5 /* ContentView.swift */,
+				F24BF1E829BC39C500B53783 /* empty.swift */,
 				F2CC349829B8D5E6004236D5 /* ContentViewBackup.swift */,
 				F2CC349C29B90EE8004236D5 /* ArtistProfile.swift */,
 				F2CC349E29B90F05004236D5 /* ArtistProfileBackup.swift */,
+				F24BF1E329BBA5BF00B53783 /* ViewModel */,
 				F2CC349A29B8D847004236D5 /* ArtPage.swift */,
+				F24BF1E629BC35FF00B53783 /* content2.swift */,
+				F2877BB729D50C3F00C5CE2A /* trail.swift */,
+				F2877BBD29D6654E00C5CE2A /* trail2.swift */,
+				F2877BBB29D60AB300C5CE2A /* NewPostView.swift */,
 				F2CC348C29B8D535004236D5 /* Assets.xcassets */,
 				F2CC348E29B8D535004236D5 /* Preview Content */,
 			);
@@ -149,11 +186,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F24BF1E729BC35FF00B53783 /* content2.swift in Sources */,
+				F24BF1E929BC39C500B53783 /* empty.swift in Sources */,
 				F2CC349F29B90F05004236D5 /* ArtistProfileBackup.swift in Sources */,
+				F2877BBC29D60AB300C5CE2A /* NewPostView.swift in Sources */,
 				F2CC349B29B8D847004236D5 /* ArtPage.swift in Sources */,
 				F2CC348B29B8D534004236D5 /* ContentView.swift in Sources */,
+				F2877BB829D50C3F00C5CE2A /* trail.swift in Sources */,
 				F2CC349D29B90EE8004236D5 /* ArtistProfile.swift in Sources */,
+				F24BF1E529BBA67000B53783 /* ArtViewModal.swift in Sources */,
+				F24BF1E129BBA36300B53783 /* ItemModel.swift in Sources */,
 				F2CC348929B8D534004236D5 /* ArtopiaApp.swift in Sources */,
+				F2877BBE29D6654E00C5CE2A /* trail2.swift in Sources */,
 				F2CC349929B8D5E6004236D5 /* ContentViewBackup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

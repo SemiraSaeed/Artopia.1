@@ -32,9 +32,9 @@ struct ArtistProfileBackup: View {
     
     var body: some View {
         
-        NavigationView{
+       
             ZStack{
-              
+                
                 
                 ScrollView{
                     
@@ -56,19 +56,20 @@ struct ArtistProfileBackup: View {
                         
                         ArtistProfile(gridItems: gridItems, numOfColumns: 3, spacing: 13, horizontalPadding:10)
                         
-                 }
+                    }
                 }
-
-            }
+                
+            
         }
         
     }
     
     
-    struct ContentViewforArtist_Previews: PreviewProvider {
-        static var previews: some View {
-            ArtistProfileBackup()
-        }
-        
-    }
 }
+struct ContentViewforArtist_Previews: PreviewProvider {
+    static var previews: some View {
+        ArtistProfileBackup()
+    }
+    
+}
+

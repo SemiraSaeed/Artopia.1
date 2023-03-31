@@ -6,11 +6,27 @@
 //
 
 
+class EnvironmentViewModel: ObservableObject/**this can be the mainpage or homepage**/
+{
+    @Published var gridItems:[String] = []
+    init (){
+        getData()
+    }
+    func getData(){
+        //self.dataArray.append("iPhone")   ...this is the long way
+        self.gridItems.append(contentsOf: gridItems)
+    }
+    
+    
+}
+    
+    
+    
 
 import SwiftUI
 struct ContentView: View {
     @State private var searchText = ""
-    let Backgroundimage = Image("Background")
+    @StateObject var viewModel: EnvironmentViewModel = EnvironmentViewModel()
     
     let gridItems = [
         GridItem(height: 220, imgString: "oil999"),
@@ -40,14 +56,13 @@ struct ContentView: View {
         GridItem(height: 260, imgString: "maria"),
         GridItem(height: 300, imgString: "coffeeinmymind"),
         GridItem(height: 380, imgString: "paranormal"),
-        GridItem(height: 450, imgString: "birmingham- flowers"),
-        
-        
-        
-        
+        GridItem(height: 450, imgString: "birmingham- flowers")
         
     ]
-    
+   
+    let selectedItem: GridItem
+    @State private var isActive : Bool = false
+   
     var body: some View {
         
         
@@ -103,34 +118,50 @@ struct ContentView: View {
                         
                         //
                         //
-                        //
+                        //   
                         //
                         
                     }
+                    List{
+                        ForEach(viewModel.gridItems, id: \.self ){ gridItems in
+                            
+                            NavigationLink {
+//                                ArtPage(viewModel: EnvironmentViewModel(), selectedItem: gridItems)
+//                                
+                                
+                                
+                                //                                viewModel: EnvironmentViewModel(), selectedItem: PinterestGrid(gridItems: gridItems, numOfColumns: 3, spacing: 9, horizontalPadding:2))/* the most imposrtant line*/
+                            } label: {
+                                Text(gridItems)
+                                
+                            }
+                        }
+                        
+                    }
                     
-                    PinterestGrid(gridItems: gridItems, numOfColumns: 3, spacing: 9, horizontalPadding:2)
-                    
+//                    NavigationLink(destination: ArtPage(), isActive: self.$isActive) {
+//                        PinterestGrid(gridItems: gridItems, numOfColumns: 3, spacing: 9, horizontalPadding:2)
+//                    }
                 }
                 //            .navigationBarItems (leading: removeBtn, trailing:  View)
-                .navigationTitle( "Explore")
+                
                 
                 
                 
             }
-        }
+        }.environmentObject(viewModel)
         
     }
     
     
 }
-    
-    
-    
-    
+
+
     
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView( selectedItem: GridItem(height: 9, imgString: "String"))
+//        ContentView(selectedItem: "")
     }
 }
 
