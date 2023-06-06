@@ -6,82 +6,101 @@
 //
 
 import SwiftUI
+
 struct Content2: View {
     @State private var searchText = ""
     @State private var selectedIndex: Int = 0
-   
-    let categories = ["Abstract Paintings", "Portrait Paintings", "Oil paintings", "Moral Photography", "Landscape Paintings"]
+    
+    
+    let categories = ["Abstract Paintings", "Portrait Paintings", "Oil Paintings", "Moral Photography", "Landscape Paintings"]
     
     let gridItems = [
-        GridItem(height: 220, imgString: "oil999"),
-        GridItem(height: 170, imgString: "flower"),
-        GridItem(height: 250, imgString: "portrait9"),
-        GridItem(height: 160, imgString: "fuu-j-Lo7venJ_ywM-unsplash"),
+        GridItem(height: 230, imgString: "oil999"),
+        
+        GridItem( height: 240, imgString: "abstract3434"),
+        
+        GridItem(height: 220, imgString: "flower"),
+        GridItem( height: 240, imgString: "portrait9"),
+        GridItem( height: 220, imgString: "fuu-j-Lo7venJ_ywM-unsplash"),
+        GridItem( height: 250, imgString: "oil987"),
+        GridItem( height: 275, imgString: "portrait2"),
+        
+        
+        GridItem( height: 200, imgString: "wow2"),
+        
+        GridItem( height: 200, imgString: "abstartc1111"),
+        GridItem( height: 200, imgString: "portrait6"),
+        GridItem( height: 250, imgString: "Abstract Painting2"),
+        GridItem( height: 220, imgString: "palace"),
+        //
+        GridItem( height: 240, imgString: "Abstract Painting3"),
+        GridItem( height: 260, imgString: "oil999"),
+        
+        
+        GridItem(height: 230, imgString: "portrait"),
+        GridItem(height: 180, imgString: "abstract3434"),
+        
+        GridItem(height: 250, imgString: "landscape"),
+        
+        GridItem(height: 380, imgString: "paranormal"),
+        GridItem(height: 450, imgString: "birmingham- flowers"),
         GridItem(height: 250, imgString: "oil987"),
         GridItem(height: 145, imgString: "portrait2"),
         
         
-        
+        GridItem(height: 190, imgString: "wow2"),
         
         GridItem(height: 190, imgString: "abstartc1111"),
-        GridItem(height: 190, imgString: "portrait6"),
-        GridItem(height: 160, imgString: "Abstract Painting2"),
-        GridItem(height: 220, imgString: "palace"),
+        GridItem(height: 250, imgString: "portrait6"),
+        GridItem(height: 160, imgString: "Abstract Painting")
         
-        GridItem(height: 240, imgString: "Abstract Painting3"),
-        GridItem(height: 260, imgString: "oil999"),
-        
-        
-        GridItem(height: 160, imgString: "portrait"),
-        GridItem(height: 180, imgString: "abstract3434")
-        ,
-        GridItem(height: 250, imgString: "landscape"),
-        GridItem(height: 200, imgString: "mana"),
-        GridItem(height: 260, imgString: "maria"),
-        GridItem(height: 300, imgString: "coffeeinmymind"),
-        GridItem(height: 380, imgString: "paranormal"),
-        GridItem(height: 450, imgString: "birmingham- flowers"),
-        
-   ]
+    ]
     @State private var isActive : Bool = false
     var body: some View {
         
         
-       
-            ScrollView{
-                SearchAndProfile()
-                     
-                ScrollView(.horizontal, showsIndicators: false){
-                    HStack{
-                        ForEach(0 ..< categories.count ){ i in
-                            
-                            //if index == 1, then isActive is true
-                            CategoryView(isActive: i == selectedIndex , text: categories[i])
-                                .onTapGesture {
-                                selectedIndex = i
+        ZStack(alignment: .bottomTrailing){
+            
+            NavigationView{
+                
+                
+                ScrollView{
+                    
+                    SearchAndProfile()
+                    
+                    ScrollView(.horizontal, showsIndicators: false){
+                        HStack{
+                            ForEach(0 ..< categories.count ){ i in
+                                
+                                //if index == 1, then isActive is true
+                                CategoryView(isActive: i == selectedIndex , text: categories[i])
+                                    .onTapGesture {
+                                        selectedIndex = i
+                                    }
+                                
+                                
                             }
-                            
-                            
                         }
-                    }
+                        
+                        
+                    }.padding(.leading, 9)
+                    //
+                    PinterestGrid(gridItems: gridItems, numOfColumns: 2, spacing: 9, horizontalPadding:2).padding(.horizontal, 7)
                     
                     
-                }.padding(.leading, 9)
-                //
-                //
-                //
-                //
+                }
                 
                 
-                
-                PinterestGrid(gridItems: gridItems, numOfColumns: 3, spacing: 9, horizontalPadding:2)
-                
-               
             }
+            NavigationLink(destination: NewPostView(title: "", Description: ""))
+            {Image(systemName:"plus.circle.fill")
+                    .foregroundColor(Color("myblue"))
+                    .fontWeight(.regular)
+                .font(.system(size: 74))}
+            .padding(.leading, 265).padding(.top, 95)
+        }
     }
-    
 }
-    
 
     
 
@@ -114,8 +133,6 @@ struct CategoryView: View{
         }.padding(.vertical, 0.9)
        
         }
-        
-    
     
 }
 struct SearchAndProfile : View{
@@ -130,7 +147,10 @@ struct SearchAndProfile : View{
                         .padding(11)
                 }.foregroundColor(.gray).background(Color.gray.opacity(0.2)).cornerRadius(10)
                 
-                NavigationLink(destination:  ArtistProfileBackup()) {Image(systemName:"person.circle").foregroundColor(Color("mypurple")).fontWeight(.semibold).font(.system(size: 29))}
+                NavigationLink(destination:  ArtistProfileBackup()) {Image(systemName:"person.circle")
+                        .foregroundColor(Color("mypurple"))
+                    .fontWeight(.regular)
+                    .font(.system(size: 29))}
 //                Button(action: {
 //                    ArtistProfile(gridItems: gridItems, numOfColumns: 3)}
 //                ){
@@ -150,6 +170,6 @@ struct Content2_Previews: PreviewProvider {
         NavigationView{
         Content2()
    
-        }
+        }.accentColor(Color("mypurple"))
     }
 }

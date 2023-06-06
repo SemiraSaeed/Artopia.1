@@ -6,11 +6,11 @@
 //
 
 import SwiftUI
-struct GridItem:Identifiable {
+struct GridItem:Identifiable, Hashable {
    
     
     
-    
+//    let name: String
     let id = UUID()
     let height: CGFloat
     
@@ -22,7 +22,7 @@ struct PinterestGrid: View {
     struct Column: Identifiable {
         let id = UUID()
         var gridItems = [GridItem]()
-       
+        
         
     }
     
@@ -58,8 +58,6 @@ struct PinterestGrid: View {
             }
             
             
-            
-            
             columns [smallestColumnIndex].gridItems
                 .append(gridItem)
             columnsHeight[smallestColumnIndex] += gridItem.height
@@ -69,53 +67,76 @@ struct PinterestGrid: View {
         self.columns = columns
     }
     @State private var isActive : Bool = false
+    var gridItems = [GridItem]()
     var body: some View {
         ZStack{
-           
-               
-                    HStack(alignment: .top, spacing: spacing){
-                        ForEach(columns) {column in
-                            LazyVStack(spacing: spacing) {
-                                ForEach(column.gridItems) { gridItem in
-                                    
-                                        
-                                        getItemView(gridItem: gridItem)
-                                        
-                                        
-                                    }
-                                
+            
+            
+            HStack(alignment: .top, spacing: spacing){
+                ForEach(columns) {column in
+                    LazyVStack(spacing: spacing) {
+                        ForEach(column.gridItems) { gridItem in
                             
-                        
-                        
+                            
+                            getItemView(gridItem: gridItem)
+                            
+                            
+                        }
                     }.padding(.horizontal, horizontalPadding)
                     
-                }}
-        }
-        
-    }
-    func getItemView(gridItem: GridItem) -> some View {
-        ZStack {
-            GeometryReader { reader in
-                NavigationLink(destination: empty( gridItems: GridItem(height: 50, imgString: gridItem.imgString)), isActive: self.$isActive) {
-                    Image(gridItem.imgString)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: reader.size.width,
-                               height: reader.size.height,
-                               alignment: .center)
                 }
                 
             }
         }
-        .frame(height: gridItem.height)
-        .frame (maxWidth: .infinity)
-        .clipShape (RoundedRectangle (cornerRadius: 13))
+        
     }
+    func getItemView(gridItem: GridItem) -> some View {
+        
+        NavigationLink(destination: DetailView(gridItem: gridItem)) {
+            GeometryReader { reader in
+                Image(gridItem.imgString)
+                    .resizable()
+                    .frame(width: reader.size.width, height: reader.size.height, alignment: .center)
+                    .aspectRatio(contentMode: .fit)
+            }
+            .frame(height: gridItem.height)
+            .frame(maxWidth: .infinity)
+            .clipShape(RoundedRectangle(cornerRadius: 13))
+        }
+    }
+        
+    
+    //    func getItemView(gridItem: GridItem) -> some View {
+    //        ZStack {
+    //            NavigationLink(destination:
+    //                            DetailView( gridItem: ""))
+    //
+    //                GeometryReader { reader in
+    //
+    //                    Image(gridItem.imgString)
+    //                        .resizable()
+    //
+    //
+    //                        .frame(width: reader.size.width,
+    //                               height: reader.size.height,
+    //                               alignment: .center)
+    //                        .aspectRatio(contentMode: .fit)
+    //
+    //
+    //                }
+    //
+    //            }
+    //
+    //
+    //        }
+    
+    
+    //            .frame(height: gridItem.height)
+    //            .frame (maxWidth: .infinity)
+    //            .clipShape (RoundedRectangle (cornerRadius: 13))
+    //        }
+    
 }
-
-
-
-
 
 
 

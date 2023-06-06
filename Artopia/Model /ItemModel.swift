@@ -6,13 +6,14 @@
 //
 
 import Foundation
-import UIKit
+
 
 struct ItemModel: Identifiable {
-    let id: String = UUID().uuidString
+    let id = UUID()
     let title: String
-    let isCompleted: Bool
-    let image: UIImage
+    let artistName: String
+    let image: String
+  
     let description: String
 }
 

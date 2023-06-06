@@ -10,21 +10,21 @@ struct ArtistProfileBackup: View {
     
     
     let gridItems = [
-        GridItem(height: 174, imgString: "oil"),
+        GridItem( height: 174, imgString: "oil"),
         
         
-        GridItem(height: 320, imgString: "portrait9"),
-        GridItem(height: 174, imgString: "fuu-j-Lo7venJ_ywM-unsplash"),
-        GridItem(height: 240, imgString: "portrait2"),
-        GridItem(height: 130, imgString: "abstract3434"),
-        GridItem(height: 150, imgString: "flower"),
-        GridItem(height: 230, imgString: "tamara-menzi-n-vnWQmmVoY-unsplash"),
-        GridItem(height: 150, imgString: "abstract782014"),
-        GridItem(height: 150, imgString: "landscape4"),
-        
-        GridItem(height: 230, imgString: "abstract6"),
-        GridItem(height: 200, imgString: "maria"),
-        GridItem(height: 160, imgString: "portrait555")
+//        GridItem(height: 320, imgString: "portrait9"),
+//        GridItem(height: 174, imgString: "fuu-j-Lo7venJ_ywM-unsplash"),
+//        GridItem(height: 240, imgString: "portrait2"),
+//        GridItem(height: 130, imgString: "abstract3434"),
+//        GridItem(height: 150, imgString: "flower"),
+//        GridItem(height: 230, imgString: "tamara-menzi-n-vnWQmmVoY-unsplash"),
+//        GridItem(height: 150, imgString: "abstract782014"),
+//        GridItem(height: 150, imgString: "landscape4"),
+//
+//        GridItem(height: 230, imgString: "abstract6"),
+//        GridItem(height: 200, imgString: "maria"),
+//        GridItem(height: 160, imgString: "portrait555")
         
         
         
@@ -37,8 +37,7 @@ struct ArtistProfileBackup: View {
                 
                 
                 ScrollView{
-                    
-                    
+                   
                     Image ("Profile").resizable().frame(width: 70.0, height: 70.0)
                     Text("Arwa Almalki")
                         .font(.caption)
@@ -53,8 +52,15 @@ struct ArtistProfileBackup: View {
                         .foregroundColor(.gray)
                     VStack{
                         
-                        
-                        ArtistProfile(gridItems: gridItems, numOfColumns: 3, spacing: 13, horizontalPadding:10)
+                        NavigationLink{
+                            LikeView()
+                        } label: {
+                            Image(systemName: "heart")
+                                .font(.title)
+                                .fontWeight(.black)
+                                .foregroundColor(.black)
+                        }
+                        ArtistProfile(gridItems: gridItems, numOfColumns: 2, spacing: 13, horizontalPadding:10)
                         
                     }
                 }

@@ -13,7 +13,7 @@ struct SearchAndProfil : View{
     var body: some View {
         ZStack{
             VStack{
-                Image("abstract")
+                Image("abstract11")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                 .edgesIgnoringSafeArea(.top)
@@ -21,14 +21,12 @@ struct SearchAndProfil : View{
             }
             VStack{
                 Spacer()
-                descriptionView(years: "").offset(y: -1)
+//                descriptionView(thoughts: "").offset(y: -1)
                 
             }
            
-          
-        }
-        
-        
+      }
+                
     }
     
 }
@@ -58,8 +56,8 @@ struct descriptionVie2: View {
                 
 //                TextField("", text: $years).frame(height: 95.0)
 //                    .multilineTextAlignment(.leading)
-                TextField("", text: $years)
-                    .padding(10).frame(height: 79)
+                TextField("", text: $years).multilineTextAlignment(.leading)
+                    .padding(10).frame(height: 79, alignment: .top)
                 .overlay(
                 // Add the outline
                     RoundedRectangle(cornerRadius: 8)

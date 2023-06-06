@@ -11,11 +11,23 @@
 		F24BF1E529BBA67000B53783 /* ArtViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24BF1E429BBA67000B53783 /* ArtViewModal.swift */; };
 		F24BF1E729BC35FF00B53783 /* content2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24BF1E629BC35FF00B53783 /* content2.swift */; };
 		F24BF1E929BC39C500B53783 /* empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24BF1E829BC39C500B53783 /* empty.swift */; };
+		F272E6FE29E3947A00D4A811 /* AuthenticationWithAppleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272E6FD29E3947A00D4A811 /* AuthenticationWithAppleView.swift */; };
+		F272E70029E3A24E00D4A811 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272E6FF29E3A24D00D4A811 /* AuthenticationManager.swift */; };
+		F272E70329E3C55C00D4A811 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F272E70229E3C55C00D4A811 /* FirebaseAuth */; };
+		F272E70529E3C58200D4A811 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F272E70429E3C58200D4A811 /* FirebaseFirestore */; };
+		F272E70829E5147E00D4A811 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272E70729E5147E00D4A811 /* Utilities.swift */; };
+		F282710929DF3F6900DA0154 /* LikeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F282710829DF3F6900DA0154 /* LikeManager.swift */; };
+		F282710B29DFAC8500DA0154 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F282710A29DFAC8500DA0154 /* GoogleService-Info.plist */; };
+		F282710E29DFAE5500DA0154 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F282710D29DFAE5500DA0154 /* FirebaseAnalytics */; };
+		F282711029DFAE5500DA0154 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F282710F29DFAE5500DA0154 /* FirebaseAnalyticsSwift */; };
 		F2877BB829D50C3F00C5CE2A /* trail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2877BB729D50C3F00C5CE2A /* trail.swift */; };
 		F2877BBC29D60AB300C5CE2A /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2877BBB29D60AB300C5CE2A /* NewPostView.swift */; };
 		F2877BBE29D6654E00C5CE2A /* trail2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2877BBD29D6654E00C5CE2A /* trail2.swift */; };
+		F2B3335029DE66FB002B9047 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B3334F29DE66FB002B9047 /* LikeButton.swift */; };
+		F2B3335229DE6D79002B9047 /* LikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B3335129DE6D79002B9047 /* LikeView.swift */; };
+		F2BE842F29E238AA00D7D581 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE842E29E238AA00D7D581 /* DetailView.swift */; };
+		F2BE843129E2476F00D7D581 /* GridItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE843029E2476F00D7D581 /* GridItemData.swift */; };
 		F2CC348929B8D534004236D5 /* ArtopiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CC348829B8D534004236D5 /* ArtopiaApp.swift */; };
-		F2CC348B29B8D534004236D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CC348A29B8D534004236D5 /* ContentView.swift */; };
 		F2CC348D29B8D535004236D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2CC348C29B8D535004236D5 /* Assets.xcassets */; };
 		F2CC349029B8D535004236D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2CC348F29B8D535004236D5 /* Preview Assets.xcassets */; };
 		F2CC349929B8D5E6004236D5 /* ContentViewBackup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CC349829B8D5E6004236D5 /* ContentViewBackup.swift */; };
@@ -29,12 +41,21 @@
 		F24BF1E429BBA67000B53783 /* ArtViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtViewModal.swift; sourceTree = "<group>"; };
 		F24BF1E629BC35FF00B53783 /* content2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = content2.swift; sourceTree = "<group>"; };
 		F24BF1E829BC39C500B53783 /* empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = empty.swift; sourceTree = "<group>"; };
+		F272E6FC29E392FE00D4A811 /* Artopia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Artopia.entitlements; sourceTree = "<group>"; };
+		F272E6FD29E3947A00D4A811 /* AuthenticationWithAppleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationWithAppleView.swift; sourceTree = "<group>"; };
+		F272E6FF29E3A24D00D4A811 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		F272E70729E5147E00D4A811 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		F282710829DF3F6900DA0154 /* LikeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeManager.swift; sourceTree = "<group>"; };
+		F282710A29DFAC8500DA0154 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F2877BB729D50C3F00C5CE2A /* trail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trail.swift; sourceTree = "<group>"; };
 		F2877BBB29D60AB300C5CE2A /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
 		F2877BBD29D6654E00C5CE2A /* trail2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trail2.swift; sourceTree = "<group>"; };
+		F2B3334F29DE66FB002B9047 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
+		F2B3335129DE6D79002B9047 /* LikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeView.swift; sourceTree = "<group>"; };
+		F2BE842E29E238AA00D7D581 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		F2BE843029E2476F00D7D581 /* GridItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItemData.swift; sourceTree = "<group>"; };
 		F2CC348529B8D534004236D5 /* Artopia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artopia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2CC348829B8D534004236D5 /* ArtopiaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtopiaApp.swift; sourceTree = "<group>"; };
-		F2CC348A29B8D534004236D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F2CC348C29B8D535004236D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2CC348F29B8D535004236D5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F2CC349829B8D5E6004236D5 /* ContentViewBackup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewBackup.swift; sourceTree = "<group>"; };
@@ -48,6 +69,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F282711029DFAE5500DA0154 /* FirebaseAnalyticsSwift in Frameworks */,
+				F272E70529E3C58200D4A811 /* FirebaseFirestore in Frameworks */,
+				F272E70329E3C55C00D4A811 /* FirebaseAuth in Frameworks */,
+				F282710E29DFAE5500DA0154 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,8 +91,43 @@
 			isa = PBXGroup;
 			children = (
 				F24BF1E429BBA67000B53783 /* ArtViewModal.swift */,
+				F2B3335129DE6D79002B9047 /* LikeView.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F272E70129E3C55C00D4A811 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F272E70629E5145F00D4A811 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F272E70729E5147E00D4A811 /* Utilities.swift */,
+			);
+			name = Utilities;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		F272E70929E5165200D4A811 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				F272E6FF29E3A24D00D4A811 /* AuthenticationManager.swift */,
+				F272E6FD29E3947A00D4A811 /* AuthenticationWithAppleView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		F2B3334E29DE66E7002B9047 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				F2B3334F29DE66FB002B9047 /* LikeButton.swift */,
+				F282710829DF3F6900DA0154 /* LikeManager.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 		F2CC347C29B8D534004236D5 = {
@@ -75,6 +135,7 @@
 			children = (
 				F2CC348729B8D534004236D5 /* Artopia */,
 				F2CC348629B8D534004236D5 /* Products */,
+				F272E70129E3C55C00D4A811 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,16 +150,22 @@
 		F2CC348729B8D534004236D5 /* Artopia */ = {
 			isa = PBXGroup;
 			children = (
+				F272E6FC29E392FE00D4A811 /* Artopia.entitlements */,
+				F282710A29DFAC8500DA0154 /* GoogleService-Info.plist */,
+				F2B3334E29DE66E7002B9047 /* Component */,
 				F24BF1DF29BBA34000B53783 /* Model  */,
 				F2CC348829B8D534004236D5 /* ArtopiaApp.swift */,
-				F2CC348A29B8D534004236D5 /* ContentView.swift */,
 				F24BF1E829BC39C500B53783 /* empty.swift */,
 				F2CC349829B8D5E6004236D5 /* ContentViewBackup.swift */,
 				F2CC349C29B90EE8004236D5 /* ArtistProfile.swift */,
+				F2BE843029E2476F00D7D581 /* GridItemData.swift */,
+				F272E70629E5145F00D4A811 /* Utilities */,
+				F272E70929E5165200D4A811 /* Authentication */,
 				F2CC349E29B90F05004236D5 /* ArtistProfileBackup.swift */,
 				F24BF1E329BBA5BF00B53783 /* ViewModel */,
 				F2CC349A29B8D847004236D5 /* ArtPage.swift */,
 				F24BF1E629BC35FF00B53783 /* content2.swift */,
+				F2BE842E29E238AA00D7D581 /* DetailView.swift */,
 				F2877BB729D50C3F00C5CE2A /* trail.swift */,
 				F2877BBD29D6654E00C5CE2A /* trail2.swift */,
 				F2877BBB29D60AB300C5CE2A /* NewPostView.swift */,
@@ -132,6 +199,12 @@
 			dependencies = (
 			);
 			name = Artopia;
+			packageProductDependencies = (
+				F282710D29DFAE5500DA0154 /* FirebaseAnalytics */,
+				F282710F29DFAE5500DA0154 /* FirebaseAnalyticsSwift */,
+				F272E70229E3C55C00D4A811 /* FirebaseAuth */,
+				F272E70429E3C58200D4A811 /* FirebaseFirestore */,
+			);
 			productName = Artopia;
 			productReference = F2CC348529B8D534004236D5 /* Artopia.app */;
 			productType = "com.apple.product-type.application";
@@ -160,6 +233,9 @@
 				Base,
 			);
 			mainGroup = F2CC347C29B8D534004236D5;
+			packageReferences = (
+				F282710C29DFAE5500DA0154 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = F2CC348629B8D534004236D5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -176,6 +252,7 @@
 			files = (
 				F2CC349029B8D535004236D5 /* Preview Assets.xcassets in Resources */,
 				F2CC348D29B8D535004236D5 /* Assets.xcassets in Resources */,
+				F282710B29DFAC8500DA0154 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,14 +267,21 @@
 				F24BF1E929BC39C500B53783 /* empty.swift in Sources */,
 				F2CC349F29B90F05004236D5 /* ArtistProfileBackup.swift in Sources */,
 				F2877BBC29D60AB300C5CE2A /* NewPostView.swift in Sources */,
+				F272E70029E3A24E00D4A811 /* AuthenticationManager.swift in Sources */,
 				F2CC349B29B8D847004236D5 /* ArtPage.swift in Sources */,
-				F2CC348B29B8D534004236D5 /* ContentView.swift in Sources */,
 				F2877BB829D50C3F00C5CE2A /* trail.swift in Sources */,
 				F2CC349D29B90EE8004236D5 /* ArtistProfile.swift in Sources */,
+				F2B3335029DE66FB002B9047 /* LikeButton.swift in Sources */,
+				F282710929DF3F6900DA0154 /* LikeManager.swift in Sources */,
+				F2BE842F29E238AA00D7D581 /* DetailView.swift in Sources */,
 				F24BF1E529BBA67000B53783 /* ArtViewModal.swift in Sources */,
+				F272E6FE29E3947A00D4A811 /* AuthenticationWithAppleView.swift in Sources */,
 				F24BF1E129BBA36300B53783 /* ItemModel.swift in Sources */,
 				F2CC348929B8D534004236D5 /* ArtopiaApp.swift in Sources */,
+				F2B3335229DE6D79002B9047 /* LikeView.swift in Sources */,
+				F2BE843129E2476F00D7D581 /* GridItemData.swift in Sources */,
 				F2877BBE29D6654E00C5CE2A /* trail2.swift in Sources */,
+				F272E70829E5147E00D4A811 /* Utilities.swift in Sources */,
 				F2CC349929B8D5E6004236D5 /* ContentViewBackup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +408,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Artopia/Artopia.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Artopia/Preview Content\"";
@@ -353,6 +438,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Artopia/Artopia.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Artopia/Preview Content\"";
@@ -399,6 +485,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F282710C29DFAE5500DA0154 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F272E70229E3C55C00D4A811 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F282710C29DFAE5500DA0154 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		F272E70429E3C58200D4A811 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F282710C29DFAE5500DA0154 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		F282710D29DFAE5500DA0154 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F282710C29DFAE5500DA0154 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		F282710F29DFAE5500DA0154 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F282710C29DFAE5500DA0154 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F2CC347D29B8D534004236D5 /* Project object */;
 }

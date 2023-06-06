@@ -77,7 +77,7 @@ struct ArtistProfile: View {
     func getItemView(gridItem: GridItem) -> some View {
         ZStack {
             GeometryReader { reader in
-                NavigationLink(destination: empty( gridItems: GridItem(height: 50, imgString: gridItem.imgString)), isActive: self.$isActive) {
+                NavigationLink(destination: DetailView(gridItem: gridItem)) {
                     Image(gridItem.imgString)
                         .resizable()
                         .scaledToFill()
@@ -99,7 +99,7 @@ struct ArtistProfile: View {
     
 struct ArtistProfile_Previews: PreviewProvider {
     static var previews: some View {
-        ArtistProfileBackup()
+        ArtistProfileBackup().accentColor(Color("mypurple"))
        
     
     
